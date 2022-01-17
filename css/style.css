@@ -1,0 +1,286 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* ============== INITIAL STYLES  ===================== */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 44px;
+    font-weight: bold;
+    color: #000000;
+}
+
+p {
+    font-size: 12px;
+    color: #616161;
+}
+
+.main-btn {
+    background-color: #EC5863;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 13px 17px;
+    font-size: 14px;
+}
+
+.blue {
+    color: #4285F4;
+}
+
+.red {
+    color: #EC5863;
+}
+
+
+/* ============ HEADER STYLES =========== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 1px;
+}
+
+
+.header__menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.header__menu ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
+}
+
+.mobile_menu {
+    display: none;
+}
+.mobile_menu button {
+    border: 0;
+    background: transparent;
+    font-size: 23px;
+}
+
+
+
+/* =============== BANNER SECTION STYLES ================ */
+#banner {
+    background-color: #FAFBFD;
+    padding: 100px 0px;
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.banner__right img {
+    width: 100%;
+}
+
+.banner_bottom {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.banner_bottom_icon i {
+    font-size: 60px;
+    color: #4285F4;
+}
+
+/* ==================== App section Style  =================== */
+.app {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 100px 0px;
+}
+
+.app_left img {
+    width: 100%;
+}
+
+
+/* ================  Exports Section Styles  ================= */
+#expert {
+    padding: 100px 0px;
+    background-color: #FAFBFD;
+}
+
+.counter_box {
+    width: 800px;
+    margin: 0 auto;
+    background: url('../images/expert-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+}
+
+.counters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.counter_item {
+    text-align: center;
+    padding: 30px;
+}
+
+.counter_item h2 {
+    color: #EC5863;
+}
+
+.counter_item p {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+
+}
+
+
+.experts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-top: 50px;
+}
+
+.expert_right img {
+    width: 100%;
+}
+
+
+/* ================== Services Section ================== */
+#services {
+    padding: 100px 0px;
+}
+
+.services_title {
+    text-align: center;
+}
+
+
+.services {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+}
+
+.service_card {
+    box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+    text-align: center;
+    padding: 76px;
+    border-radius: 8px;
+}
+
+.service_card h3 {
+    padding-top: 30px;
+}
+
+/* Mobile Sidebar */
+.sidebar {
+    width: 400px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    height: 100vh;
+    display: none;
+    transition: 2s ease-in-out;
+    z-index: 10;
+}
+
+.sidebar-top {
+    background-color: thistle;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar_close_btn {
+    border: 0;
+    background-color: transparent;
+    font-size: 30px;
+}
+
+.sidebar-menu {
+    padding: 20px;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    
+}
+
+.sidebar-menu ul li {
+    margin: 10px 0px;
+}
+
+.sidebar-menu ul li a {
+    text-decoration-line: none;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+
+/* ==== For Mobile === */
+@media only screen and (max-width: 767px)  {
+    /* header */
+    .header__menu {
+        display: none;
+    }
+    .header_btn {
+        display: none;
+    }
+    .mobile_menu{
+        display: block;
+    }
+
+    /* Banner */
+    .banner {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 60px;
+    }
+
+    /* App Section */
+    .app {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 30px;
+    }
+
+    .counter_box {
+        width: 360px;
+        background-position: 0;
+    }
+
+    .counters {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* exports */
+    .experts {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 50px;
+    }
+
+    .services {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 30px;
+    }
+}
